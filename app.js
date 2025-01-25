@@ -10,16 +10,21 @@ function agregarAmigo(){
     }
     else{
         amigos.push(contenido)
+        agregarLista(contenido)
     }
     console.log(amigos)
-    limpiar()
+    limpiarInput()
 }
 
-//Limpia la barra de entrada de texto
-function limpiar () {
+//Limpia input
+function limpiarInput () {
     document.getElementById('amigo').value=""
 }
 
-function agregarLista() {
-    console.log("hola")
+//Agregar los nombres a la lista que aparece debajo
+function agregarLista(nombre) {
+    lista = document.getElementById('listaAmigos')
+    let amigoNuevo = document.createElement('li')
+    amigoNuevo.textContent = nombre
+    lista.appendChild(amigoNuevo)
 }

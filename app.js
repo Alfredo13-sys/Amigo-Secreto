@@ -20,3 +20,6 @@ function limpiar () {
     document.getElementById('amigo').value=""
 }
 
+function agregarLista() {
+    console.log("hola")
+}

@@ -28,3 +28,17 @@ function agregarLista(nombre) {
     amigoNuevo.textContent = nombre
     lista.appendChild(amigoNuevo)
 }
+
+function sortearAmigo() {
+    if (amigos.length > 0){
+        let longitud = amigos.length
+        let aleatorio = Math.floor(Math.random()*(longitud))
+        let amigoElegido = amigos[aleatorio]
+        resultado = document.getElementById('resultado')
+        let ganador = document.createElement('li')
+        ganador.textContent = resultado
+    }
+    else{
+        alert("Lista vacia")
+    }
+}

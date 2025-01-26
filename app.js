@@ -29,16 +29,26 @@ function agregarLista(nombre) {
     lista.appendChild(amigoNuevo)
 }
 
+//Selecciona un amigo de forma aleatoria y lo muestra en pantalla
 function sortearAmigo() {
     if (amigos.length > 0){
         let longitud = amigos.length
         let aleatorio = Math.floor(Math.random()*(longitud))
         let amigoElegido = amigos[aleatorio]
-        resultado = document.getElementById('resultado')
+        lista = document.getElementById('resultado')
+        lista.innerHTML=""
         let ganador = document.createElement('li')
-        ganador.textContent = resultado
+        ganador.textContent = amigoElegido
+        lista.appendChild(ganador)
+        limpiarPantalla()
+        
     }
     else{
         alert("Lista vacia")
     }
+}
+
+function limpiarPantalla() {
+    lista = document.getElementById('listaAmigos')
+    lista.innerHTML=""
 }

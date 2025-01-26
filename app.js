@@ -41,7 +41,7 @@ function sortearAmigo() {
         ganador.textContent = amigoElegido
         lista.appendChild(ganador)
         limpiarPantalla()
-        
+        amigos.splice(aleatorio,1)
     }
     else{
         alert("Lista vacia")
